@@ -7,6 +7,8 @@ export class ProductListComponent{
     pageTitle : string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
+    showImage: boolean = false;
+    listFilter :string = 'cart';
     products : any[]= [
                         {
                             "productId": 1,
@@ -24,7 +26,7 @@ export class ProductListComponent{
                             "productCode": "GDN-0023",
                             "releaseDate": "March 18, 2016",
                             "description": "15 gallon capacity rolling garden cart",
-                            "price": 32.99,
+                            "price": 32.993435,
                             "starRating": 4.2,
                             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
                         },
@@ -59,4 +61,7 @@ export class ProductListComponent{
                             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
                         }
                     ];
+        toogleImage(): void{
+            this.showImage = !this.showImage;
+        }
 }
